@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+  <% include ./partials/header.ejs %>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="space"></div>
+        <div class="col-sm-6 pimg">
+          <img class="img-responsive" src="/pics/img-001.jpg" alt="Product Image">
+        </div>
+        <div class="space"></div>
+        <div class="col-sm-6 pdetails">
+          <h2><%= product.productName %></h2>
+          <div class="linefull"></div>
+          <h4>Price : <b>Rs. <%= product.price %></b></h4>
+          <p><b>Cash On Delivery</b> eligible.</p>
+          <% if(product.quantity >= 1){ %>
+            <p style="color:#196619;">In Stock</p>
+          <% } else{ %>
+            <p style="color:#196619;">Out Of Stock</p>
+          <% } %>
+          <p>Color : <div style="width:40px;height:40px;border:1px solid #000000;background-color:<%= product.color %>;"></div></p>
+          <a class="btn btn-default top-space" href="/product/add-to-cart/<%= product.id %>">Add To Cart</a>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="pdesc">
+        <h3>Description</h3><br>
+        <p><b>Category</b> : <%= product.category %></p>
+        <p><b>Description</b> : <%= product.description %></p>
+        <p><b>Model</b> : <%= product.model %></p>
+        <p><b>Brand Name</b> : <%= product.brandName %></p>
+        <p><b>Size</b> : <%= product.size %></p>
+      </div><br>
+    </div>
+  </main>
+
+  <% include ./partials/footer.ejs %>
+</body>
+</html>

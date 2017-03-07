@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+  <% include ./partials/header.ejs %>
+
+  <main>
+    <% include ./partials/topbar.ejs %>
+
+    <div class="product-details-box">
+      <span><h3>Product Details</h3></span><br>
+      <div class="details">
+        <% if(product != null){ %>
+          <p>Product Name : <%= product.productName %></p>
+          <p>Category : <%= product.category %></p>
+          <p>Price : <%= product.price %></p>
+          <p>Description : <%= product.description %></p>
+          <p>Quantity : <%= product.quantity %></p>
+          <p>Color : <div style="width:40px;height:40px;border:1px solid #000000;background-color:<%= product.color %>;"></div></p>
+          <p>Model : <%= product.model %></p>
+          <p>BrandName : <%= product.brandName %></p>
+          <p>Size : <%= product.size %></p>
+          <p>Created On : <%= product.createdOn %></p>
+          <p>Updated On : <%= product.updatedOn %></p><br>
+        <% } else{%>
+          <p>Product Not Found. Or Maybe Removed.</p><br>
+        <% } %>
+      </div>
+    </div>
+  </main>
+
+  <% include ./partials/footer.ejs %>
+</body>
+</html>

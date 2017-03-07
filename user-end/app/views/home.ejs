@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+  <% include ./partials/header.ejs %>
+
+  <main>
+    <div class="space"></div>
+    <div class="container-fluid">
+      <% if(count){ %>
+        <div class="row">
+          <% for(i=0;i<count;i++){ %>
+            <div class="col-sm-3">
+              <div class="space"></div>
+              <div class="panel panel-success">
+                <div class="panel-heading"><h3><%= product[i].productName %></h3></div>
+                <div class="panel-body">
+                  <p>Category : <%= product[i].category %></p>
+                  <p>Price : <%= product[i].price %></p>
+                  <p>Size : <%= product[i].size %></p>
+                  <p>Brand Name : <%= product[i].brandName %></p>
+                </div>
+                <div class="panel-footer">
+                    <a class="btn btn-default top-space" href="/product/single-product/<%= product[i]._id %>">View</a>
+                    <a class="btn btn-default top-space" href="/product/add-to-cart/<%= product[i]._id %>">Add To Cart</a>
+                    <!-- <form id="del-form<%= i %>" class="top-margin" action="/admin/api/v1/product/delete/<%= product[i]._id %>" method="post">
+                      <a class="btn btn-default" onclick="document.getElementById('del-form<%= i %>').submit();">Delete</a>
+                    </form> -->
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      <% } else{ %>
+        <p>No Data Found.</p>
+        <p>Admin Has Not Published Any Product Yet.</p>
+        <p>Please Visit Later.</p>
+      <% } %>
+    </div>
+  </main>
+
+  <% include ./partials/footer.ejs %>
+</body>
+</html>

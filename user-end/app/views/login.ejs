@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body class="login-screen">
+  <% include ./partials/header.ejs %>
+  <main>
+    <div class="login-box">
+      <span class="login-icon"><i class="icon_lock_alt"></i></span>
+      <form class="login-form" action="/user/api/v1/login" method="post">
+        <div class="input-block">
+          <span class="input-icon"><i class="icon_profile"></i></span>
+          <input class="input-box" type="email" name="email" placeholder="Email" autofocus required/>
+        </div>
+        <div class="input-block">
+          <span class="input-icon"><i class="icon_key_alt"></i></span>
+          <input class="input-box" type="password" name="password" placeholder="Password" required/>
+        </div>
+        <div class="forgot-link">
+          <a href="/user/forgot-password/step-one">Forgot Your Password?</a>
+        </div><br>
+        <button class="btn btn-primary btn-block" type="submit" name="submit">Login</button><br>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

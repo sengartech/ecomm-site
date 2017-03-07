@@ -1,0 +1,23 @@
+{
+  "name": "Ecom-App-Admin",
+  "description": "Ecommerce App for online shoping.",
+  "author": "Rishabh Singh",
+  "private": "true",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.3",
+    "morgan": "^1.8.1",
+    "shortid": "^2.2.6",
+    "synchronize": "^2.0.0"
+  }
+}
