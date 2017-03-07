@@ -2,14 +2,14 @@
   <nav class="nav navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="../">Ecomm Admin</a>
+        <a class="navbar-brand" href="http://localhost:9000/admin">Ecomm Admin</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <% if(admin){ %>
           <li><a href="/admin">Dashboard</a></li>
           <li><a href="/admin/view-product">All Products</a></li>
           <li><a href="/admin/orders">All Orders</a></li>
-          <li><a href="https://localhost:3000">User-End</a></li>
+          <li><a href="http://localhost:3000">User-End</a></li>
           <li><a href=""><%= admin.firstName %></a></li>
           <li><a href="/admin/logout">Logout</a></li>
         <% } else{ %>

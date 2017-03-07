@@ -26,7 +26,7 @@ Implementation:
 
   Admin-end works at (port:9000) : http://localhost:9000/admin
 
-  User-end works at (port:3000) : http://localhost:3000/home
+  User-end works at (port:3000) : http://localhost:3000/
 
 
 How to run:
@@ -40,7 +40,7 @@ for admin:
 
 for user:
   Step 1: Install all dependencies by : npm install
-  Step 2: open site at. http://localhost:3000/home
+  Step 2: open site at. http://localhost:3000/
   Step 3: you are good to go now. Create account,shop, add to cart, checkout, orders,settings.
 
 
