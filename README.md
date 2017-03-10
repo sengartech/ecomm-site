@@ -43,7 +43,7 @@ for admin:
 
 for user:
   Step 1: Install all dependencies by : npm install
-  Step 2: open site at. http://localhost:3000/home
+  Step 2: open site at. http://localhost:3000
   Step 3: you are good to go now. Create account,shop, add to cart, checkout, orders,settings.
 ```
 ## Built With
